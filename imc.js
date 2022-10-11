@@ -2,10 +2,15 @@ window.onload = () => {
     var campoPeso = document.getElementById('peso');
     var campoAltura = document.getElementById('altura');
     var botaoCalcular = document.getElementById('calcular');
+    var botaoLimpar = document.getElementById('limpar');
 
+    var divTextoPadrao = document.getElementById('texto-padrao');
     var divResultado = document.getElementById('resultado');
     var textoPeso = document.getElementById('peso-imc');
     var classificacaoPeso = document.getElementById('descricao-imc');
+
+    var textoAlertaPeso = document.getElementById('alerta-peso');
+    var textoAlertaAltura = document.getElementById('alerta-altura');
 
     var peso = 0;
     var altura = 0;
@@ -14,6 +19,21 @@ window.onload = () => {
         e.preventDefault();
 
         calcularImc();
+    });
+
+    botaoLimpar.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        campoPeso.value = '';
+        campoAltura.value = '';
+        
+        textoAlertaPeso.style.display = 'none';
+        textoAlertaAltura.style.display = 'none';
+        divTextoPadrao.style.display = 'block';
+        divResultado.style.display = 'none';
+
+        campoPeso.style.borderColor = '#2e2e2e';
+        campoAltura.style.borderColor = '#2e2e2e';
     });
 
     function calcularImc() {
@@ -40,15 +60,29 @@ window.onload = () => {
         classificacaoPeso.innerText = classificao;
 
         divResultado.style.display = 'block';
+        divTextoPadrao.style.display = 'none';
     }
 
     function validarCampos() {
+        campoPeso.style.borderColor = '#2e2e2e';
+        campoAltura.style.borderColor = '#2e2e2e';
+
+        textoAlertaPeso.style.display = 'none';
+        textoAlertaAltura.style.display = 'none';
+
+        divTextoPadrao.style.display = 'block';
+        divResultado.style.display = 'none';
+
         if (peso == '') {
-            alert('Peso inválido!');
+            textoAlertaPeso.style.display = 'block';
+
+            campoPeso.style.borderColor = '#ff0303';
             
             return false;
         } else if (altura == '') {
-            alert('Altura inválida!');
+            textoAlertaAltura.style.display = 'block';
+
+            campoAltura.style.borderColor = '#ff0303';
 
             return false;
         }
