@@ -5,25 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="estilo.css">
     <script src="imc.js"></script>
 </head>
 <body>
-    <form id="calculadora-imc">
-        <div>
-            <label for="peso">Peso</label>
-            <input type="text" name="peso" id="peso">
+    <main>
+        <header>
+            <h1>Calculadora de IMC</h1>
+            <h2>Para te ajudar a descobrir seu índice de massa corporal</h2>
+        </header>
+        <div class="quadro">
+            <form id="calculadora-imc">
+                <div class="div-peso">
+                    <div class="div-label-peso">
+                        <label for="peso" class="label-peso">Peso:</label>
+                    </div>
+                    <div class="div-campo-peso">
+                        <input type="text" name="peso" id="peso" class="campo-peso" maxlength="5">
+                        <small id="alerta-peso" class="alerta-peso">Número informado para o peso está incorreto</small>
+                    </div>
+                </div>
+                <div class="div-altura">
+                    <div class="div-label-altura">
+                        <label for="altura" class="label-altura">Altura:</label>
+                    </div>
+                    <div class="div-campo-altura">
+                        <input type="text" name="altura" id="altura" class="campo-altura" maxlength="5">
+                        <small id="alerta-altura" class="alerta-altura">Número informado para a altura está incorreto</small>
+                    </div>
+                </div>
+                <div class="botao-calcular">
+                    <button type="button" id="calcular">Calcular</button>
+                </div>
+                <div class="botao-limpar">
+                    <button type="reset" id="limpar">Limpar</button>
+                </div>
+            </form>
+            <div id="texto-padrao" class="texto-padrao">
+                <p>Digite seu peso e altura para descobrir seu IMC.</p>
+            </div>
+            <div id="resultado" class="resultado">
+                <p>Seu IMC é de <span id="peso-imc"></span> kg/m².</p>
+                <p>A classificação do seu peso é <span id="descricao-imc"></span>.</p>
+            </div>
         </div>
-        <div>
-            <label for="altura">Altura</label>
-            <input type="text" name="altura" id="altura">
-        </div>
-        <div>
-            <button type="button" id="calcular">Calcular</button>
-        </div>
-    </form>
-    <div id="resultado" style="display: none;">
-        <p>Seu IMC é de <span id="peso-imc"></span> kg/m².</p>
-        <p>A classificação do seu peso é <span id="descricao-imc"></span>.</p>
-    </div>
+    </main>
 </body>
 </html>
