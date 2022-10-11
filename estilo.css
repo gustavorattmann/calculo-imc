@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: arial;
+}
+
+main {
+    margin: 5% auto;
+}
+
+header h1 {
+    font-size: 4.5rem;
+    text-align: center;
+    margin-bottom: 0.2rem;
+}
+
+header h2 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.quadro {
+    width: 50vw;
+    height: auto;
+    padding: 5%;
+    margin: auto;
+    background: #b3b3b3;
+    border: 0.3rem solid #2e2e2e;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+.label-peso, .label-altura {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.campo-peso, .campo-altura {
+    width: 98%;
+    height: 2rem;
+    font-size: 1.2rem;
+    outline: none;
+    border: 2px solid #2e2e2e;
+    border-radius: 5px;
+    padding: 0 1%;
+}
+
+.campo-peso:focus, .campo-altura:focus {
+    border-color: #5571e6 !important;
+}
+
+.div-campo-peso {
+    margin-bottom: 2%;
+}
+
+.alerta-peso, .alerta-altura {
+    display: none;
+    color: #ff0303;
+}
+
+.botao-calcular, .botao-limpar {
+    display: inline;
+}
+
+.botao-calcular button, .botao-limpar button {
+    margin-top: 2%;
+    padding: 1rem;
+    font-size: 1.3rem;
+    border: 2px solid #2e2e2e;
+    border-radius: 5px;
+}
+
+.botao-calcular button:hover, .botao-limpar button:hover {
+    background: #5571e6;
+    color: #ffffff;
+}
+
+.botao-calcular button {
+    background: #1d8043;
+    color: #ffffff;
+    float: right;
+    margin-right: -2px;
+}
+
+.botao-limpar button {
+    background: #e04343;
+    color: #ffffff;
+}
+
+.texto-padrao, .resultado {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+.resultado {
+    display: none;
+}
+
+#descricao-imc {
+    font-weight: 700;
+}
