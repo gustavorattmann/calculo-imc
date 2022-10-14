@@ -4,11 +4,13 @@
 }
 
 body {
-    font-family: arial;
-}
-
-main {
-    margin: 5% auto;
+    height: 100vh;
+    width: auto;
+    max-width: 100%;
+    font-family: Arial;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 header h1 {
@@ -24,7 +26,7 @@ header h2 {
 }
 
 .quadro {
-    width: 50vw;
+    max-width: 70%;
     height: auto;
     padding: 5%;
     margin: auto;
@@ -35,16 +37,16 @@ header h2 {
 }
 
 .label-peso, .label-altura {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 700;
 }
 
 .campo-peso, .campo-altura {
-    width: 98%;
-    height: 2rem;
+    width: 97%;
+    height: 1.5rem;
     font-size: 1.2rem;
     outline: none;
-    border: 2px solid #2e2e2e;
+    border: 1% solid #2e2e2e;
     border-radius: 5px;
     padding: 0 1%;
 }
@@ -53,7 +55,7 @@ header h2 {
     border-color: #5571e6 !important;
 }
 
-.div-campo-peso {
+.div-campo-peso, .div-campo-altura {
     margin-bottom: 2%;
 }
 
@@ -62,14 +64,15 @@ header h2 {
     color: #ff0303;
 }
 
-.botao-calcular, .botao-limpar {
-    display: inline;
+.botoes {
+    display: flex;
+    justify-content: space-between;
 }
 
 .botao-calcular button, .botao-limpar button {
     margin-top: 2%;
-    padding: 1rem;
-    font-size: 1.3rem;
+    padding: .6rem;
+    font-size: 1rem;
     border: 2px solid #2e2e2e;
     border-radius: 5px;
 }
@@ -82,8 +85,6 @@ header h2 {
 .botao-calcular button {
     background: #1d8043;
     color: #ffffff;
-    float: right;
-    margin-right: -2px;
 }
 
 .botao-limpar button {
@@ -93,7 +94,7 @@ header h2 {
 
 .texto-padrao, .resultado {
     margin-top: 2rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .resultado {
@@ -102,4 +103,18 @@ header h2 {
 
 #descricao-imc {
     font-weight: 700;
+}
+
+@media (max-width: 767px) {
+    header {
+        padding: 2%;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header h2 {
+        font-size: 1rem;
+    }
 }
