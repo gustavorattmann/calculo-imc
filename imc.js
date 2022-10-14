@@ -6,7 +6,9 @@ window.onload = () => {
 
     var divTextoPadrao = document.getElementById('texto-padrao');
     var divResultado = document.getElementById('resultado');
-    var textoPeso = document.getElementById('peso-imc');
+    var textoPesoImc = document.getElementById('peso-imc');
+    var textoPesoValor = document.getElementById('peso-valor');
+    var textoAlturaValor = document.getElementById('altura-valor');
     var classificacaoPeso = document.getElementById('descricao-imc');
 
     var textoAlertaPeso = document.getElementById('alerta-peso');
@@ -52,11 +54,17 @@ window.onload = () => {
             imc = String(imc).replace('.', ',');
 
             exibirTexto(imc, classificacao);
+
+            textoPesoValor.innerText = ` do seu peso de ${campoPeso.value.trim()}kg`;
+            textoAlturaValor.innerText = ` e altura de ${campoAltura.value.trim()}m`;
+
+            campoPeso.value = '';
+            campoAltura.value = '';
         }
     }
 
     function exibirTexto(imc, classificao) {
-        textoPeso.innerText = imc;
+        textoPesoImc.innerText = imc;
         classificacaoPeso.innerText = classificao;
 
         divResultado.style.display = 'block';
