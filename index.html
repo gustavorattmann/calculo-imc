@@ -34,18 +34,20 @@
                         <small id="alerta-altura" class="alerta-altura">Número informado para a altura está incorreto</small>
                     </div>
                 </div>
-                <div class="botao-calcular">
-                    <button type="button" id="calcular">Calcular</button>
-                </div>
-                <div class="botao-limpar">
-                    <button type="reset" id="limpar">Limpar</button>
+                <div class="botoes">
+                    <div class="botao-limpar">
+                        <button type="reset" id="limpar">Limpar</button>
+                    </div>
+                    <div class="botao-calcular">
+                        <button type="button" id="calcular">Calcular</button>
+                    </div>
                 </div>
             </form>
             <div id="texto-padrao" class="texto-padrao">
                 <p>Digite seu peso e altura para descobrir seu IMC.</p>
             </div>
             <div id="resultado" class="resultado">
-                <p>Seu IMC é de <span id="peso-imc"></span> kg/m².</p>
+                <p>O IMC<span id="peso-valor"></span><span id="altura-valor"></span> é de <span id="peso-imc"></span>kg/m².</p>
                 <p>A classificação do seu peso é <span id="descricao-imc"></span>.</p>
             </div>
         </div>
